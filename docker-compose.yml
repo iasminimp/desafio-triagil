@@ -1,0 +1,13 @@
+name: project-container
+services:
+  ubuntu:
+    container_name: ubuntu
+    build:
+      context: ./
+      args:
+        GIT_USERNAME: "Name example"
+        GIT_EMAIL: "email@example.com"
+    ports:
+      - 127.0.0.1:3000:3000
+    stdin_open: true
+    tty: true
